@@ -1,5 +1,6 @@
 import { AppError } from "../../errors/AppError";
 import { sendEmail } from "../../utils/sendEmail";
+
 import { IUser } from "../user/user.interface";
 import { User } from "../user/user.model";
 import bcrypt from "bcrypt";

@@ -4,6 +4,7 @@ exports.rootRouter = void 0;
 const express_1 = require("express");
 const user_routes_1 = require("../modules/user/user.routes");
 const auth_routes_1 = require("../modules/auth/auth.routes");
+const analysis_routes_1 = require("../modules/analysis/analysis.routes");
 exports.rootRouter = (0, express_1.Router)();
 const excludingModule = [
     {
@@ -13,6 +14,10 @@ const excludingModule = [
     {
         path: "/auth",
         element: auth_routes_1.authRoutes,
+    },
+    {
+        path: "/analysis",
+        element: analysis_routes_1.AdminRoutes,
     },
 ];
 excludingModule.forEach((x) => exports.rootRouter.use(x.path, x.element));
